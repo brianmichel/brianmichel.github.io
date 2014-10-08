@@ -1,11 +1,21 @@
 <html>
 <head>
-	<title>Link Tester</title>
+<title>Link Tester</title>
 </head>
 <body>
-	<a target="_blank" href="https://www.google.com">Google</a>
-	<a target="_blank" href="http://www.apple.com">Apple</a>
-	<a target="_blank" href="http://www.tumblr.com">Tumblr</a>
-	<a href="https://www.youtube.com/embed/_n_sB6Yn2vM" target="_blank" class="link_title">Guy torments Girlfriend with Lord of The Rings Quotes - YouTube</a>
+<a target="_blank" href="https://www.google.com">Google</a>
+<a target="_blank" href="http://www.apple.com">Apple</a>
+<a target="_blank" href="http://www.tumblr.com">Tumblr</a>
+<a id="block_link" href="https://www.youtube.com/embed/_n_sB6Yn2vM" target="_blank" class="link_title">Guy torments Girlfriend with Lord of The Rings Quotes - YouTube</a>
+
+<script type="text/javascript">
+function stopDefAction(event) {
+	event.preventDefault();
+}
+
+document.getElementById('block_link').addEventListener(
+	'click', stopDefAction, false
+);
+</script>
 </body>
 </html>
